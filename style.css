@@ -16,6 +16,7 @@ body {
   display: flex;
   width: 75%;
   height: 75%;
+  position: relative;
 }
 
 .game__player1,
@@ -27,8 +28,76 @@ body {
   border-radius: 10px;
   background-color: rgb(247, 247, 238);
   font-size: 2rem;
+  padding: 80px;
 }
 
 .game__player2 {
   background-color: beige;
+}
+
+.game__players-total-box {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.game__player1-total,
+.game__player2-total {
+  margin-left: 50%;
+}
+
+.game__player1-current,
+.game__player2-current {
+  margin-left: 3px;
+}
+
+.game__players-current-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  font-size: 1.25rem;
+  color: rgb(254, 240, 240);
+  gap: 10px;
+  background-color: rgb(245, 188, 119);
+  width: 13rem;
+  height: 8rem;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.game__player1-current,
+.game__player2-current {
+  font-size: 1.75rem;
+}
+
+.game__buttons {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 4rem;
+  margin-left: 28.5rem;
+}
+
+.game__buttons-new {
+  margin-bottom: 17rem;
+}
+
+.game__buttons-roll {
+  margin-bottom: 3rem;
+}
+
+.game__buttons-new,
+.game__buttons-roll,
+.game__buttons-hold {
+  width: 10rem;
+  height: 3rem;
+  font-size: 1.15rem;
+  border: none;
+  border-radius: 20px;
+  border-color: white;
+  background-color: white;
+  cursor: pointer;
 }
