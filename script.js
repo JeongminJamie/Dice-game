@@ -4,18 +4,20 @@ let player1 = "player1";
 let player2 = "player2";
 
 // players' current scores
-let player1Current = document.querySelector("game__player1-current").value;
-let player2Current = document.querySelector("game__player2-current").value;
+let player1Current = document.querySelector(".game__player1-current").innerHTML;
+let player2Current = document.querySelector(".game__player2-current").innerHTML;
 
 // players' total scores
-let player1Total = document.querySelector("game__player1-total").value;
-let player2Total = document.querySelector("game__player2-total").value;
+let player1Total = document.querySelector(".game__player1-total").innerHTML;
+let player2Total = document.querySelector(".game__player2-total").innerHTML;
 
-const rollBtn = document.querySelector(".game__button-roll");
+const rollBtn = document.querySelector(".game__buttons-roll");
+holdBtn = document.querySelector(".game__buttons-hold");
+
 //handle dice roll button
 const handleRollBtn = () => {
   let randomDiceNum = Math.floor(Math.random() * 6);
-
+  console.log(randomDiceNum);
   //when dice number is 1 or 2
   if (randomDiceNum === 1 || randomDiceNum === 2) {
     if (currentPlayer === "player1") {
@@ -37,18 +39,18 @@ const handleRollBtn = () => {
   }
 };
 
-holdBtn = document.querySelector(".game__buttons-hold");
 //handle hold button
 const handleHoldBtn = () => {
   if (player1Current >= 3) {
-      player1Total += player1Current;
-      player1Current = 0;
-      currentPlayer = "player2";
-  } else if(player2Current >= 3) {
+    player1Total += player1Current;
+    player1Current = 0;
+    currentPlayer = "player2";
+  } else if (player2Current >= 3) {
     player2Total += player2Current;
     player2Current = 0;
     currentPlayer = "player1";
   }
 };
-rollBtn.addEventListener(onclick, handleRollBtn);
-holdBtn.addEventListener(onclick, handleHoldBtn);
+
+rollBtn.addEventListener("click", handleRollBtn);
+holdBtn.addEventListener("click", handleHoldBtn);
