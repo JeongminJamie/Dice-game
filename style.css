@@ -82,7 +82,14 @@ body {
 }
 
 .game__buttons-new {
-  margin-bottom: 17rem;
+  margin-bottom: 6rem;
+}
+
+.game__dice {
+  width: 110px;
+  height: 110px;
+  margin-bottom: 7rem;
+  margin-left: 1.75rem;
 }
 
 .game__buttons-roll {
